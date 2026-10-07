@@ -1,0 +1,2 @@
+@model IEnumerable<ApplicationUser>
+<h2>User & Role Management</h2><table class="table"><thead><tr><th>Name</th><th>Email</th><th>Active</th><th></th></tr></thead><tbody>@foreach(var x in Model){<tr><td>@x.FullName</td><td>@x.Email</td><td>@x.IsActive</td><td><a asp-action="Edit" asp-route-id="@x.Id">Manage</a></td></tr>}</tbody></table>
